@@ -9,9 +9,14 @@ import Model.Client;
 import Model.Admin;
 import Model.User;
 
-public class Login {
-    public Login(Database database, Scanner s){
-        System.out.println("Enter your email:");
+public class Main {
+
+    public static void main(String[] args) {
+        Database database = new Database();
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Welcome to Car Rental System !");
+        System.out.println("Enter your email:\n(-1) tp create new account");
         String email = s.next();
         System.out.println("Enter password:");
         String password = s.next();
@@ -57,6 +62,7 @@ public class Login {
                 System.out.println("Welcome " +u.getFirstName()+"!");
                 u.showList(database, s);
             }
-        }
-    }   
+        
+        } 
+    }  
 }
