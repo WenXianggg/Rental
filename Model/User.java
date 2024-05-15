@@ -1,5 +1,6 @@
 package Model;
 
+
 import java.util.Scanner;
 
 public abstract class User {
